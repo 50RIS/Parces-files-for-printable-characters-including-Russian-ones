@@ -33,20 +33,19 @@ fclose(f);
 string[fsize] = 0;
 }
 
-// It serves 0-9a-zA-Z_. -A-Яа-я now.
+// The code allows 0-9a-zA-Z_. -A-Яа-я now.
 
-//The characters in KOI8-R:
-// To check out the code:
+// To check out the KOI8-R code for a character:
 // echo -n 'a character' | iconv -c -f utf-8 -t koi8-r | hexdump -C
 
 // The ranges of KOI8-R are:
-// а-я are in a range: c0-df,
+// а-я are in the range: c0-df,
 // А-Я: e0-ff,
 // Ё,ё: b3,a3,
 // 0-9: 30-39,
 // a-z: 61-7a,
 // A-Z: 41-5a,
-// 'The bell' which is absent here: 07
-// <> are 3c and 3e; '!' is 21; ':' is 3a; \/ are 5c and 2f; '-' is 2d
-// blank space: 20 (есть!); carrige return: 0a
+// 'The bell' which is absent here: 07,
+// <> are 3c and 3e; '!' is 21; ':' is 3a; \/ are 5c and 2f; '-' is 2d,
+// blank space: 20 (present); carrige return: 0a
 // and the '.' is 2e.
