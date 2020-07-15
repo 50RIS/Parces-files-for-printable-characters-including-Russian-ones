@@ -1,4 +1,4 @@
-/* gcc -o the_compiled_binary_name Parsing_files_for_printable_characters_including_Russian_alphabet.c # How to compile it */
+/* gcc -o the_compiled_binary_name Parsing_files_for_printable_characters_including_Russian_alphabet.c #  How to compile it */
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
