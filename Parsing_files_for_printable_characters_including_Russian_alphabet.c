@@ -1,4 +1,4 @@
-/* gcc -std=c99 -o to_s to_s.c */
+/* gcc -o the_compiled_binary_name Parsing_files_for_printable_characters_including_Russian_alphabet.c # How to compile */
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
