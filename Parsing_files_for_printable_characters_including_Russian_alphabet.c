@@ -33,19 +33,20 @@ fclose(f);
 string[fsize] = 0;
 }
 
-// Переделано под юникод, цифры, буквы минус нижн_подч пробел перенос строки точка
-// echo '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_. -' | hexdump -C
+// It serves 0-9a-zA-Z_. -A-Яа-я now.
 
-// ниже это про кои-8
+//The characters in KOI8-R:
+// To check out the code:
+// echo -n 'a character' | iconv -c -f utf-8 -t koi8-r | hexdump -C
 
-// echo -n 'символ' | iconv -c -f utf-8 -t koi8-r | hexdump
-// а-я: c0-df
-// А-Я: e0-ff
-// Ё,ё: b3,a3
-// 0-9: 30-39
-// a-z: 61-7a
-// A-Z: 41-5a
-// «звоночек» который сюда НЕ добавлен: 7
-// <> 3c,3e; ! 21; : 3a; \/ 5c,2f; - 2d (есть!)
-// пробел: 20 (есть!); перенос строки (есть!): 0a
-// и точка почему-то есть (2e)
+// The ranges of KOI8-R are:
+// а-я are in a range: c0-df,
+// А-Я: e0-ff,
+// Ё,ё: b3,a3,
+// 0-9: 30-39,
+// a-z: 61-7a,
+// A-Z: 41-5a,
+// 'The bell' which is absent here: 07
+// <> are 3c and 3e; '!' is 21; ':' is 3a; \/ are 5c and 2f; '-' is 2d
+// blank space: 20 (есть!); carrige return: 0a
+// and the '.' is 2e.
