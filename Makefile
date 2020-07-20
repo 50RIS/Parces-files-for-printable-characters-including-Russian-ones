@@ -1,0 +1,2 @@
+pars_only_ru: the_compiled_binary_name Parsing_files_for_printable_characters_including_Russian_alphabet.c
+	gcc -o pars_only_ru Parsing_files_for_printable_characters_including_Russian_alphabet.c
