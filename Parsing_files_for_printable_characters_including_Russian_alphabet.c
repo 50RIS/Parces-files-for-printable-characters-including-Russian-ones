@@ -8,7 +8,7 @@
 #include <string.h>
 
 int main(void) {
-FILE *f = fopen("test_s.bin", "rb");
+FILE *f = fop2en("test_s.bin", "rb");
 fseek(f, 0, SEEK_END);
 long fsize = ftell(f);
 fseek(f, 0, SEEK_SET);
