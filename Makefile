@@ -2,3 +2,4 @@ pars_only_ru: Parsing_files_for_printable_characters_including_Russian_alphabet.
 	gcc Parsing_files_for_printable_characters_including_Russian_alphabet.c -o pars_only_ru &> ren.log
 	a=$?
 	./ren.sh "${a}" ren.log
+# stop. hummer time.
