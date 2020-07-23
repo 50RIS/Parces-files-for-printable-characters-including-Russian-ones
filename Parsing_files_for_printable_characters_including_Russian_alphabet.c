@@ -1,4 +1,4 @@
-/* gcc -o the_compiled_binary_name Parsing_files_for_printable_characters_including_Russian_alphabet.c # How to compile manually !! */
+/* gcc -o the_compiled_binary_name Parsing_files_for_printable_characters_including_Russian_alphabet.c # How to compile manually !!!! */
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -8,7 +8,7 @@
 #include <string.h>
 
 int main(void) {
-FILE *f = fop2en("test_s.bin", "rb");
+FILE *f = fopen("test_s.bin", "rb");
 fseek(f, 0, SEEK_END);
 long fsize = ftell(f);
 fseek(f, 0, SEEK_SET);
