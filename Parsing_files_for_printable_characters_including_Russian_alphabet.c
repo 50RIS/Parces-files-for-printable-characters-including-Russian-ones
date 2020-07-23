@@ -48,4 +48,4 @@ string[fsize] = 0;
 // 'The bell' which is absent here: 07,
 // <> are 3c and 3e; '!' is 21; ':' is 3a; \/ are 5c and 2f; '-' is 2d,
 // blank space: 20 (present); carrige return: 0a
-// and the '.' is 2e.
+// and the '.' is 2e
